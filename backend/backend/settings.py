@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     #own
     'contact_form',
     'blog',
+    'taggit',
+    'login',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

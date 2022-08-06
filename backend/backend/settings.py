@@ -31,6 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # General use templates & template tags (should appear first)
+    'adminlte3',
+    # Optional: Django admin theme (must be before django.contrib.admin)
+    'adminlte3_theme',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 3rd party 
     'crispy_forms',
+    'django_summernote',
     #own
     'contact_form',
     'blog',
@@ -91,6 +96,7 @@ DATABASES = {
     }
 }
 
+print(BASE_DIR)
 
 
 # Password validation
@@ -111,6 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
@@ -128,7 +135,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = "/blog/static/"
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 

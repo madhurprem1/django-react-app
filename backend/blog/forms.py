@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Category, Post
 
 from django import forms
-
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 class CategoryForm(forms.ModelForm):
     display_order = forms.IntegerField(initial=0, required=False)
@@ -25,3 +25,8 @@ class PostForm(forms.ModelForm):
             'subcategory_name'
             'tags',
         ]
+
+
+# Apply summernote to specific fields.
+class SomeForm(forms.Form):
+    foo = forms.CharField(widget=SummernoteWidget())  # instead of forms.Textarea

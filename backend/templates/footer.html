@@ -1,20 +1,28 @@
 
 {% block footer%}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/footer.css' %}">
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
             crossorigin="anonymous" />
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <style>
-                body {
-                font-family: "Roboto", sans-serif;
-                font-size: 17px;
-                background-color: #fdfdfd;
-            }
-            .shadow {
-            box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
-            }
-            /* Footer */
+
+
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>   
+<style>
+    body {
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    background-color: #fdfdfd;
+}
+.shadow {
+box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+}
+/* Footer */
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 section {
 padding: 30px 0;
@@ -100,20 +108,71 @@ margin-bottom: 5px;
             </style>            
             <!-- Footer -->
 <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav"> -->
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
 
-    </div>
+    </div> -->
 
 <!-- </nav> -->
-
-<footer class="page-footer font-small blue bg-grey">
-    <div class="text-center">
+<!-- <body class="d-flex flex-column"> -->
+<footer class=" bg-white">
+    <div class="container py-5">
+      <div class="row py-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+          <ul class="list-inline mt-4">
+            <li class="list-inline-item"><a href="#" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
+            <!-- <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"><i class="fa fa-pinterest"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i class="fa fa-vimeo"></i></a></li> -->
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Shop</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-muted">For Women</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">For Men</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Stores</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Our Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Company</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-muted">Login</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Register</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Wishlist</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Our Products</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
+          <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.</p>
+          <div class="p-1 rounded border">
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+              <div class="input-group-append">
+                <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</footer>
+<!-- </body> -->
+<!-- <footer class="page-footer font-small blue bg-#3398E1">
+    <div class="container text-center text-md-center">
     <a href="#" class="fa fa-facebook"></a>
     <a href="#" class="fa fa-twitter"></a>
     <a href="#" class="fa fa-instagram" ></a>
-    <p class="m-0 text-dark text-center ">2022 Copyright &copy; Jetre </p>
+    <div class="footer-copyright text-center py-3">2022 Copyright &copy; 
+
+        <a href="/"> Jenter.in</a>
     </div>
-</footer>
+    
+    </div>
+</footer> -->
 
 
 <!-- Footer -->

@@ -48,6 +48,7 @@ class Post(Base):
     category_name = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='Category')
     subcategory_name = models.ForeignKey(SubCategory, on_delete=models.CASCADE, related_name='SubCategory')
     delete_flag = models.BooleanField(default=True, blank=False)
+    likes = models.ManyToManyField(User, related_name='blogpost_like')
     tags = TaggableManager()
 
     
@@ -56,4 +57,7 @@ class Post(Base):
 
     def __str__(self):
         return self.title
+    
+    def number_of_likes(self):
+        return self.likes.count()
 
